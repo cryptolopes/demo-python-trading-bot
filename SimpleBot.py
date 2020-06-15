@@ -62,8 +62,7 @@ class SimpleBot:
             self.log("Error reading config file")
             self.log("Exiting.")
             exit(1)
-
-    
+            
 def main():
     bot = SimpleBot()
     bot.read_config("config.cfg")
