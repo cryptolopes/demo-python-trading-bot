@@ -7,6 +7,7 @@ import configparser
 # some property will be superseded by the config file
 class SimpleBot:
     def __init__(self):
+        # there will be a log for each day
         timestamp = datetime.datetime.utcnow().strftime("%Y-%m-%d")
         s = format(timestamp)
         self.log_file = "bot_" + s + ".log" 
@@ -25,6 +26,7 @@ class SimpleBot:
         self.price_asset_name = "BTC"
 
     def log(self, msg):
+        
         timestamp = datetime.datetime.utcnow().strftime("%b %d %Y %H:%M:%S UTC")
         s = "[{0}]:{1}".format(timestamp, msg)
         print(s)
@@ -183,8 +185,6 @@ def main():
                 if bid_amount >= bot.min_amount:
                     bot.log("Post buy order")
                     my_address.buy(assetPair=waves_btc, amount=bid_amount, price=bid_price, matcherFee=bot.order_fee, maxLifetime=bot.order_lifetime)
-
-
 
         bot.log("---------------------------------------------------------------")
         sleep(bot.seconds_to_sleep)
