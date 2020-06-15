@@ -168,8 +168,7 @@ def main():
                     # ---- Collect last balances
                     last_waves_balance = my_address.balance()/(10 ** bot.amount_asset.decimals)
                     last_btc_balance   = my_address.balance(bot.price_asset_id)/(10 ** bot.price_asset.decimals)
-
-                    
+                  
             # -------------------------------------------------
             bid_price = (best_bid - bot.price_step)
             bot.log("bid_price = " + str(bid_price))
