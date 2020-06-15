@@ -145,6 +145,8 @@ def main():
             # calculate what is better between sell or buy
             # it will sell waves (buying btc)  if btc price lower than previous price less spread
             # it will buy  waves (selling btc) if btc price greater than previous price plus spread
+            # to work better the spread must be taken small as much as possible bid and ask prices must be
+            # the first in pool
 
             # -------------------------------------------------
             ask_price= (best_ask + bot.price_step)
