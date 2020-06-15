@@ -31,7 +31,7 @@ class SimpleBot:
         s = "[{0}]:{1}".format(timestamp, msg)
         print(s)
         try:
-            f = open(self.log_file, "a")
+            f = open(self.log_file, "a") 
             f.write(s + "\n")
             f.close()
         except OSError:
