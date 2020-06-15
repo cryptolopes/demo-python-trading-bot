@@ -124,6 +124,7 @@ def main():
         bot.log("Last BID   Price   " + str(best_bid))
 
         # ---- calculate value and gain (respect actual price)
+        # ---- gain value represent the increase or decrease in Waves if the bot was not running
         value = (last_waves_balance + (last_btc_balance/best_bid))
         gain  = value - start_value
         bot.log("GAIN  = " + str(gain)  + " Waves")
