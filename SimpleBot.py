@@ -132,8 +132,8 @@ def main():
         
         # ---- check if pool changed
         if ((best_bid == last_best_bid) and (best_ask == last_best_ask)):
-            # Pool not changed
-            # ----------------
+            # Pool not changed to prevent useless traffic 
+            # -------------------------------------------
             bot.log("Pool NOT changed")
         else:
             # pool changed
