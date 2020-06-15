@@ -123,7 +123,7 @@ def main():
         bot.log("Last BTC   balance " + str(last_btc_balance))
         bot.log("Last BID   Price   " + str(best_bid))
 
-        # ---- calculate value and gain
+        # ---- calculate value and gain (respect actual price)
         value = (last_waves_balance + (last_btc_balance/best_bid))
         gain  = value - start_value
         bot.log("GAIN  = " + str(gain)  + " Waves")
