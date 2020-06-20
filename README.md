@@ -1,6 +1,6 @@
-# SimpleBot
+# Waves-Exchange trading bot (forked from SimpleBot)
 
-SimpleBot is a Python bot implementing a scalping trading strategy. It can work with any assets pair on the Waves DEX.
+It is a Python bot implementing a scalping trading strategy. It can work with any assets pair on the Waves DEX.
 
 SimpleBot exploits small changes in currency prices: it buys at the mean price minus some step and sells at the mean price plus some step, in order to gain the bid/ask difference. It normally involves establishing and liquidating a position quickly, in this case within 15 seconds.
 
